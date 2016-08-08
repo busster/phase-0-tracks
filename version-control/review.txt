@@ -1,0 +1,103 @@
+Shell: The shell is a command line interface where a user can access programs, files, or directories and execute commands. It can also be used to access different services within your operating system.
+
+Bash: Bash is essentially a shell or command line interpretor. 
+
+
+pwd: this command prints to the screen your current working directory. 
+
+ls: this command lists information about the contents of the current directory.
+
+mv: this command moves files or directories.
+
+cd: this command changes your directory to whatever you input.
+
+touch: this command creates a file.
+
+mkdir: this command creates a directory.
+
+rm: this command removes a file or directory.
+
+help: this command gives you information about available commands. It can also provide more detail about the specifics of each command.
+
+find: this command searches a folder/ hierarchy for a file that meets a search criteria.
+
+grep: this command searches a file for lines that match a given search criteria.
+
+
+Version control: Version control is a system that keeps track of changes to a file or files over time in a repository. It can be used to access specific versions of those files that have been saved. Developers use it because every change is archived along with information such as who issued the change and a message about what the change is. This keeps a project organized and protected in case it needs to be rolled back to a previous state as a result of some bug or other issue.
+
+Commit: A commit is when you record or save changes to your repository. A good commit message is a statement that accurately and specifically describes the changes that are included in the commit. It needs to be specific so you can keep a detailed log of the code. This is especially important when working in teams so that others can be certain about what is happening on in your code.
+
+Branch: A branch is a pointer which points to a particular commit or code state. It allows the developer to create a parallel code state for evolving their code.
+
+3 stages of commit: 
+	1. Untracked: the file exists but has not been integrated into version control. To move to the next stage you would add the file with: git add file.extension
+
+	2. Staged/ Added: the file has been added to version control but has not been committed. To move to the final stage you would commit the file with: git commit -m "message about the file being committed"
+
+	3. Committed: the changed file has been committed to version control
+
+
+Git: git is a version control system used to manage your code history. It does so by creating repositories that can keep track of different code states 
+
+Github: github is a hosting service for your git repositories. 
+
+The difference between git and github is that git is the tool for version control while github is the service that can be used to manage projects.
+
+Create, Clone, Update: 
+	1. to create a local repository run:
+		git init
+	inside the repository. This will initialize a new git repo.
+
+	You can also create one within Github which can be done from the create new button located at the upper right hang corner of the page.
+
+	2. to clone a repository run:
+		git clone /path_to_local_repo
+
+		or
+
+		git clone url_of_your_github_repo
+	this will create a copy of the repository on your machine. Make sure this folder is not already a git repo.
+
+	3. If you would like to log your changes with github you will have to push the branch with the changes to it. this can be done by using:
+		git push origin <branch>
+	This will push the branch to the github repository. There you can create a pull request and merge the branch. After you have merged the branch your github repository will be updated.
+
+	to update your local repository from your github one run:
+		git pull
+	inside your working directory to update all changes.
+
+
+Fork, Clone, Update
+	1. You can fork a repository within github. You can do this from the fork button at the upper right hand corner of the page. when you click this a fork of the original will be created on to your github account.
+
+	2. to clone a repository run:
+		git clone url_of_your_github_repo
+	in the directory you want to place the repository. this will create a copy of the repository on your machine. Make sure this folder is not already a git repo.
+
+	3. to update your repository first push the changes out to your github. do this with:
+		git push origin <branch>
+	This will push the branch to the github repository. There you can create a pull request. This will push your branch to your master branch. After this you can merge the pull request. Once you have done this your github repo will be up to date. Finally you can update your local repo with: 
+		git pull
+
+
+Pull request: pull requests are alerts of changes that have been pushed to a github repository. 
+
+	To create a pull request:
+		1. navigate to your repository 
+		2. click New pull request
+			a. make sure that the forks are correct
+			b. make sure the base is master and that compare is the branch you want to compare.
+
+			c. make sure to add a meaningful title and description
+		3.click create new pull request.
+
+	To merge a pull request:
+		1. navigate to your repository
+		2. click pull requests
+		3. click merge pull requests
+			a. make sure you add a meaningful commit message
+		4. also, it might be a good idea to delete the branch used in the merge as this will keep the branches organized.
+
+
+Pull requests are usefull because they can allow for review and discussion. Developers can review the changes and discuss any further actions that need to be taken or submit follow up commits.

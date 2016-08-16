@@ -1,0 +1,32 @@
+Review
+
+1. A browser is what is used to render and display webpages for a user. It uses HTTP (computer to computer protocol, text requests that allow computers to exchange files and other information) to pass information between the client (user computer) and the server (a remote computer/ computer network that handles data distribution). It then renders (interpretting the data to make it human readable/ create all the cool affects we see on our screen) so that users can use the page.
+
+2. HTML stands for Hyper Text Markup Language. It is the way to markup a webdocument for a browser to then interpret and render the page. It is the language the browser uses to communicate with the internet. Tags are keywords that the browser uses to format and render the content in a document. HTML is made up of elements in a tree structure which add content to the page. Another name for elements are nodes. Elements can have attributes, which is just additional information about the element. Elements can be block level or inline. Block level elements occupy the entire space of the parent element. They always start on a new line and take the full width available. Inline elements do not start on a new line and take up only as much width as necessary.
+
+3. head: contains data not displayed in the viewport but is useful information for the page.
+
+body: contains the contents of the html page, the elements that are to be rendered.
+
+p: defines a paragraph.
+
+form: collects user input from text input, checkboxes, and buttons.
+
+div: a division or section. it is a block element that can be formatted.
+
+span: is a way to group inline elements and style them.
+
+select: creates a drop-down list. 	
+
+h2: is a heading of priority two. They are used to denote importance.
+
+ol: is an ordered list. numbered
+
+ul: is an unordered list. bulleted.
+
+table: creates a table of information. rows and columnds
+
+tr: defines a row in a table
+
+td: defines a cell in a table
+

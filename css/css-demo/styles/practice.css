@@ -1,0 +1,20 @@
+section#contact-info {
+	font-size: .8em;
+}
+
+h3 {
+	margin-top: 0px;
+}
+.job ul {
+	margin: 0px;
+}
+section.job {
+	background-color: #e9e5dc;
+	padding: 10px;
+	border-radius: 10px;
+	margin-top: 5px;
+}
+
+ul.list {
+	font-size: .8em;
+}

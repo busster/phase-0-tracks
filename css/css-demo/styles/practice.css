@@ -18,3 +18,11 @@ section.job {
 ul.list {
 	font-size: .8em;
 }
+
+section.job:hover {
+	background-color: red;
+}
+
+.list > li.featured {
+	color: green;
+}

@@ -1,3 +1,27 @@
+body {
+  /*text-align: center;*/
+}
+.wrap {
+  margin: auto;
+  width: 70%;
+  border: 1px solid red;
+}
+#external-links {
+ /* position: relative;*/
+  /*width: 200px;*/
+  display: inline-block;
+  vertical-align: top;
+  /*float: left;*/
+  max-width: 20%;
+}
+main {
+  /*position: relative;*/
+  /*width: 756px;*/
+  display: inline-block;
+  /*float: right;*/
+  max-width: 80%;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -29,4 +53,18 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  #external-links {
+    width: 100%;
+    max-width: 100%;  
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: .75em;  
+  }
 }

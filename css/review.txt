@@ -1,0 +1,18 @@
+# CSS Review
+
+1. colors, font related properties (size/ weight), height/ width properties, positioning properties (relative/ absolute, floats)
+
+2. external stylesheet, internal stylesheet, inline style
+	I would prefer an external sheet because it is easier to maintain and organize if its all contained in one seperate location.
+
+3. selectors are what are used to select elements in html. You then assign attributes or rule sets to style these elements.
+	Some selectors are classes: using the '.' to select them.
+	id's: using the '#'
+	block level elements: div, section
+	inline elements: span
+
+4. html elements can be thought of as boxes with rings around them of different properties. the content of the element goes in the center, then padding, then a border, then margin.
+
+5. cascading refers to the fact that multiple stylesheets will stack up to form one set of rules for an html document. so the cascading effect occurs when you link more than one css document to the html.
+
+6. media queries, and max/min widths. you can also size elements based on percentage rather than px's so that they scale with the page.

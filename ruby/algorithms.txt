@@ -1,0 +1,63 @@
+- When someone enters elevator:
+	- Get current floor:
+	- Until valid floor in building is given, ask what floor they wish to go to:
+		- If floor request is current floor
+			- Thank them and tell them they are on that floor
+		- Else if 
+			- Press the button of the floor requested
+			- Wait until floor has been reached
+			- Thank them and tell them they have arrived at (x) floor.
+	
+
+Brushing my teeth()
+
+- Check supplies()
+	- if toothbrush is out in the bathroom
+		- get the toothbrush
+			- if toothbrush is old
+				- throw out toothbrush
+				- go to cabinet and get a toothbrush
+					- if no toothbrush in cabinet
+						- mark on grocery list that you need a new toothbrush
+						- continue
+	- else if no toothbrush out
+		- go to cabinet and get a toothbrush
+			- if no toothbrush in cabinet
+				- mark on grocery list that you need a new toothbrush
+				- continue
+	- if toothpaste is in the bathroom
+		- get the toothpaste
+			-if no toothpaste left in container
+				- throw out toothpaste
+				- go to cabinet and get toothpaste
+					- if no toothpaste in cabinet
+						- mark on grocery list that you need more toothpaste
+						- continue
+		- else if no toothpaste out
+			- go to cabinet and get toothpaste
+				- if no toothpaste in cabinet
+					- mark on grocery list that you need more toothpaste
+					- continue
+					
+- brush(region)
+	- time = 10 seconds
+	- for time
+		- clean outer face of region
+	- for time
+		- clean inner face of region
+	- for time
+		- chewing surface
+
+- Do morning and night
+	- Enter bathroom
+	- check supplies()
+	- If you have toothbrush and toothpaste
+		- pick up toothbrush
+		- wet toothbrush in sink
+		- apply toothpaste to brush
+		- brush(upper left)
+		- brush (upper right)
+		- brush (lower left)
+		- brush (lower right)
+	- Else 
+		- take grocery list and go shopping

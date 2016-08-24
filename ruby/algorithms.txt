@@ -1,0 +1,10 @@
+- When someone enters elevator:
+	- Get current floor:
+	- Until valid floor in building is given, ask what floor they wish to go to:
+		- If floor request is current floor
+			- Thank them and tell them they are on that floor
+		- Else if 
+			- Press the button of the floor requested
+			- Wait until floor has been reached
+			- Thank them and tell them they have arrived at (x) floor.
+	

@@ -71,23 +71,31 @@ def date_of_birth()
 	return age, dob
 end
 
-def garlicbread()
-	puts "Our company cafeteria serves garlic bread. Should we order some for you? "
-	while garlicbread = gets.downcase.chomp
-		if garlicbread == "yes"
-			garlicbread = true
+def yes_no()
+	while variable = gets.downcase.chomp
+		if variable == "yes"
+			variable = true
 			break
-		elsif garlicbread == "no"
-			garlicbread = false
+		elsif variable == "no"
+			variable = false
 			break
 		else 
 			print "yes/no: "
 		end
 	end
-	return garlicbread
+	return variable
 end
-			
-	
+
+def checkName()
+	puts "What is your name? "
+	name = gets.chomp
+
+	if name == "Drake Cula" || name == "Tu Fang"
+		check_name = false
+	else
+		check_name = true
+	end
+end
 
 
 
@@ -95,7 +103,42 @@ end
 
 # DRIVER CODE
 
-# checkAge(date_of_birth())
+check_name = checkName()
+
+birthday_check = checkAge(date_of_birth())
+
+puts "Our company cafeteria serves garlic bread. Should we order some for you? "
+garlicbread_check = yes_no()
+
+puts "Would you like to enroll in the company’s health insurance? "
+insurance_check = yes_no()
+
+
+if check_name == false
+	results = "Definitely a vampire."
+elsif birthday_check == false
+	if garlicbread_check == false && insurance_check == false
+		results = "Almost certainly a vampire."
+	elsif garlicbread_check == false || insurance_check == false
+		results = "Probably a vampire."
+	end
+elsif birthday_check == true && (garlicbread_check == true || insurance_check == true)
+	results = "Probably not a vampire."
+else
+	results = "Results inconclusive."
+end
+
+puts results
+		
+	
+
+
+
+
+
+
+
+
 
 
 # def interview()

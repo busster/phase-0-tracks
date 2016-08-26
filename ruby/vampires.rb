@@ -95,95 +95,60 @@ def checkName()
 	else
 		check_name = true
 	end
+	return name, check_name
 end
 
+def interview()
+	check_name = checkName()
+	name = check_name[0]
+	check_name = check_name[1]
+
+	birthday_check = checkAge(date_of_birth())
+
+	puts "Our company cafeteria serves garlic bread. Should we order some for you? "
+	garlicbread_check = yes_no()
+
+	puts "Would you like to enroll in the company’s health insurance? "
+	insurance_check = yes_no()
+
+
+	if check_name == false
+		results = "Definitely a vampire."
+	elsif birthday_check == false
+		if garlicbread_check == false && insurance_check == false
+			results = "Almost certainly a vampire."
+		elsif garlicbread_check == false || insurance_check == false
+			results = "Probably a vampire."
+		end
+	elsif birthday_check == true && (garlicbread_check == true || insurance_check == true)
+		results = "Probably not a vampire."
+	else
+		results = "Results inconclusive."
+	end
+
+	print "\n"
+	puts "#{name} is: #{results}"
+	print "\n"*2
+end
 
 
 
 
 # DRIVER CODE
 
-check_name = checkName()
-
-birthday_check = checkAge(date_of_birth())
-
-puts "Our company cafeteria serves garlic bread. Should we order some for you? "
-garlicbread_check = yes_no()
-
-puts "Would you like to enroll in the company’s health insurance? "
-insurance_check = yes_no()
-
-
-if check_name == false
-	results = "Definitely a vampire."
-elsif birthday_check == false
-	if garlicbread_check == false && insurance_check == false
-		results = "Almost certainly a vampire."
-	elsif garlicbread_check == false || insurance_check == false
-		results = "Probably a vampire."
+print "How many employees are being processed?: "
+counter = 0
+while number = gets.chomp
+	if number =~ /^+\d+$/
+		number = number.to_i
+		break
+	else
+		puts "Numbers (0-9) please."
 	end
-elsif birthday_check == true && (garlicbread_check == true || insurance_check == true)
-	results = "Probably not a vampire."
-else
-	results = "Results inconclusive."
+end
+while counter < number
+	interview()
+
+	counter += 1
 end
 
-puts results
-		
-	
-
-
-
-
-
-
-
-
-
-
-# def interview()
-# 	date_of_birth()
-
-# 	puts "What is your name: "
-# 	name = gets.chomp
-# 	puts "How old are you: "
-# 	age = gets.chomp.to_i
-# 	puts "What year were you born: "
-# 	yob = gets.chomp
-	
-# 	loop do
-# 		puts "Our company cafeteria serves garlic bread. Should we order some for you? "
-# 		garlicbread = gets.downcase.chomp
-# 		break if garlicbread == "yes" || garlicbread == "no"
-# 	end
-
-# 	if garlicbread == "yes"
-# 			garlicbread = true
-# 	elsif garlicbread == "no"
-# 			garlicbread = false
-# 	end
-
-# 	loop do
-# 		puts "Would you like to enroll in the company’s health insurance? "
-# 		insurance = gets.downcase.chomp
-# 		break if insurance == "yes" || insurance == "no"
-# 	end
-
-# 	if insurance == "yes"
-# 			insurance = true
-# 	elsif insurance == "no"
-# 			insurance = false
-# 	end
-	
-
-
-	
-	
-	
-
-	
-
-# end
-
-
-# interview()

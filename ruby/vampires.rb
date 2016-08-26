@@ -1,3 +1,9 @@
+
+
+
+
+
+
 require 'date'
 
 
@@ -59,23 +65,37 @@ def date_of_birth()
 			dob = dob.split "/"
 			break
 		else
-			puts "Please format like this: MM/DD/YYYY"
+			print "Please format like this: MM/DD/YYYY: "
 		end
 	end
 	return age, dob
 end
+
+def garlicbread()
+	puts "Our company cafeteria serves garlic bread. Should we order some for you? "
+	while garlicbread = gets.downcase.chomp
+		if garlicbread == "yes"
+			garlicbread = true
+			break
+		elsif garlicbread == "no"
+			garlicbread = false
+			break
+		else 
+			print "yes/no: "
+		end
+	end
+	return garlicbread
+end
+			
+	
+
 
 
 
 
 # DRIVER CODE
 
-checkAge(date_of_birth())
-
-# a = date_of_birth()
-# a = a.join ""
-# puts a
-
+# checkAge(date_of_birth())
 
 
 # def interview()

@@ -1,0 +1,80 @@
+1. A variable is an object that contains some data. It can be called by using the variables name. It is a representation of data.
+
+2. The result of this code will be "AbrahamLincoln" 
+
+Ruby will execute the code substituting first_name for "Abraham" and last_name for "Lincoln". Then it will combine the strings because of the + sign and write that string to full_name
+
+3. string: a data type that contains characters such as "abc" "hello" 
+It may even contain numbers or special characters, however these numbers cannot be used for arithmetic as that is a different data type. "123" ".!?"
+
+these could be used to store names, cities, favorite foods etc....
+
+
+integer: a data type that contains integers/ numbers: 123
+They are whole numbers.
+
+these could be used to do math or store amounts in variables.
+
+
+float: a data type that contains floating point numbers: 1.2 3.445 
+they contain a decimal point 
+* really only accurate to 14 decimal places....
+
+these could be used for accurate math calculations
+
+
+nil: data type that stores nothing. It cannot be used in arithmetic, or on strings
+
+can be useful if you want to set a variable but are unsure whether or not it will be used.
+
+
+boolean: data type of true/ false 0/ 1.
+
+can be used when trying to evaluate logic statements.
+
+
+4. an algorithm is a process or a set of rules for a program to follow
+
+5. search and sort algorithms
+
+6. a method is a way to write code to be used over and over again. it can be called simply by calling the method name and passing in any necessary data. A programmer might use a method to conquer repetitive tasks.
+
+7. return value: every method returns a value. in the case of using the return statment, a method will directly output this value
+
+
+side effect: this is when a method actually returns nothing but instead changes some non local variable
+
+
+parameter: a parameter is an input into a method
+
+
+argument: another name for input into a method
+
+
+implicit return: this is when a method returns a value but not one directly called by using return. it is usually the last variable or operation in the method.
+
+
+8. a global variable is a variable that is available everywhere in your ruby program. they can be declared with the $ sign infront of the variable. a local variable is one that is only available within its scope. for instance any variable inside of a method is only available to that method. the variable does not exist outside of the method.
+
+
+9. flow control is using conditional statements to either execute or not execute lines of code. these can be if else statemtns. do while etc......
+
+they can be used if the programmer has conditions that the program data needs to meet. or to make sure that proper data is being input.
+
+
+10. loop: code that executes over and over until a condition is met
+
+
+if: executes if some condition
+
+
+else: used in conjunction with the if statement. executes if the IF statement is not evaluated
+
+
+elsif: also used in conjunction with the if statement. placed in between the if and else. executes after the if statemetn and can have a condition attached to it.
+
+
+while: while some condition, execture some code.
+
+
+until: until some condition execute some code.

@@ -139,7 +139,7 @@ def interview()
 	print "\n"
 	puts "#{name} is: #{results}"
 	print "\n"*2
-	print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
 end
 
 
@@ -162,4 +162,6 @@ while counter < number
 
 	counter += 1
 end
+
+print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 

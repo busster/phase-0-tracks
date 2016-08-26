@@ -126,6 +126,16 @@ def interview()
 		results = "Results inconclusive."
 	end
 
+	puts "Do you have any allergies?\nEnter 'done' when you are finished: "
+	while allergy = gets.chomp
+		if allergy == "sunshine"
+			results = "Probably a vampire."
+			break
+		elsif allergy == "done"
+			break		
+		end
+	end
+
 	print "\n"
 	puts "#{name} is: #{results}"
 	print "\n"*2

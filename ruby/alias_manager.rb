@@ -1,10 +1,37 @@
-# - Swap first and last name
-# 	- run .split on the string to get both into an array
-# 	- first, last = string.split()
-# - change vowel to next vowel (a, e, i, o, u,)
-# 	- can simply transform string
-# 	- string.tr ('aeiou', 'eioua')
-# - change consonants to next consonant in alphabet
+
+# - create 2 strings
+# 	- one with alphabetical string of only consonants
+# 	- one alphabetical but with first char moved to end
+# 		- make string into array and rotate array
+# 		- make back into string
+# - get a name from user
+# 	- downcase name
+# 	- move consonants in name to next consonant with .tr(alphabetical cons, alphabetical with first char at end)
+# 					---- this maps the next letter in place in the string and handles the edge case-------
+# 	- move vowels in name to next vowel with .tr(aeior, eioua)
+# 					---- same concept -----
+# 	- split name into array of first and last
+# 	- rotate array to make first name now the last name
+# 	- for each word in array, capitalize the word
+
+
+
+
+# - make an empty array
+# - make a switch to toggle program on or off
+# - while switch on
+# 	- get some name input from user
+# 	- if user inputs quit
+# 		- toggle off
+# 	- elsif user enters empty string
+# 		- loop back to beginning
+# 	- else
+# 		- run write name input to array
+# - iterate through array and run program on each item
+# - print results
+
+
+
 
 # ##### EXAMPLE #####
 # < Felicia Torres

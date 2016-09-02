@@ -4,12 +4,6 @@ def search_array(array, int)
 	in_array = false
 	index = 0
 
-	# if array.map {|num| int == num}
-	# 	return index
-	# else
-	# 	return nil
-	# end
-
 	array.each do |num| 
 		if int == num
 			in_array = true
@@ -23,4 +17,29 @@ def search_array(array, int)
 	end
 end
 
-p search_array(arr, 10)
+
+# DRIVER CODE
+
+# p search_array(arr, 1)
+# returns => 3
+# p search_array(arr, 24)
+# returns => nil
+
+
+
+
+
+def fib(int)
+	number = [0,1]
+	while number.length < int
+		number << number[-2] + number[-1]
+	end
+	return number
+end
+
+# DRIVER CODE
+
+# p fib(6)
+# p fib(100)[-1] == 218922995834555169026
+# returns => true
+# so we know it works

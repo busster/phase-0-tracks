@@ -1,3 +1,5 @@
+# RELEASE 0
+
 arr = [42, 89, 23, 1]
 
 def search_array(array, int)
@@ -27,7 +29,7 @@ end
 
 
 
-
+# RELEASE 1
 
 def fib(int)
 	number = [0,1]
@@ -43,3 +45,25 @@ end
 # p fib(100)[-1] == 218922995834555169026
 # returns => true
 # so we know it works
+
+
+
+
+# RELEASE 2
+
+# - input an array of letters
+# - set alphabet to variable to compare to
+# - create method 
+# 	- iterates through array
+# 		- set boolean to false
+# 		- get current index letter and next index letter
+# 		- get index of each letter in the alphabet
+# 		- compare the indexs 
+# 		- swap if current letter index in alphabet is greater than next letter index in alphabet
+# 		- set boolean to true
+# 	- break if boolean is false
+# - output array of letters alphabetized 
+
+
+# [a,z,e,g,j]
+# [a,e,g,j,z]

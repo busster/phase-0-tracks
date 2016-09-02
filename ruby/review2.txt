@@ -1,0 +1,28 @@
+1. Data structures are used to hold information. They can store multiple types of information and virtually limitless amounts of it. They are dynamically sized. This is more useful and more useable than declaring new invidual variables for each new peice of data. They can also be iterated through which is helpful.
+
+
+2. An array is a data structure that holds any type of data. It is zero indexed and indices can be called by referencing the index number. array data are stored between [] and seperated by ,'s'
+
+3. arrays can hold numbers: [1,2,3,4,5,5,6,7,8,9,9]
+arrays can also hold string lists: [red, green, blue, yellow, black]
+
+
+4. Hashes are a data structure that can hold any data type. The difference between a hash and an array is that hashes have keys that correspond to theirvalues. these keys have specific string names or symbols. a hash is declared with {}
+grades = {Jason: "A", Jimmy: "B"}
+------------|-----------|--------------
+These are the keys of the hash. You can reference values by their key
+grades[:Jason] 
+=> "A"
+
+5. Hashes could store a list of options for your webpage: options = {font_size: 10, font_family: "Arial"}
+They could store a list of characteristics of a person: person = {hair_color: "brown", eye_color: "green"}
+
+
+6. iteration is useful because it allows you to operate on each item in a data set. 
+
+7. most data entry jobs should use iteration to input data into a form.
+
+
+8. they are chunks of code that are associated with a method. you can add a block to any method.
+
+9. block parameters are just like method parameters. they are local to the block. you set the block parameters where you call the block in your method. You can do this when you call yield for the block to exectue.

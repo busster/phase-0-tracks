@@ -67,3 +67,40 @@ end
 
 # [a,z,e,g,j]
 # [a,e,g,j,z]
+
+
+def assign_index(char)
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	alphabet = alphabet.split("")
+
+	alphabet.each do |letter|
+		if char == letter
+			return alphabet.index(letter)
+		end
+	end
+end
+
+def alphabetize(letters)
+	length = letters.length
+	
+	
+	loop do
+		swapped = false
+		(length-1).times do |i|
+			if assign_index(letters[i]) >  assign_index(letters[i+1])
+				letters[i], letters[i+1] = letters[i+1], letters[i]
+				swapped = true
+			end
+
+		end
+
+	break if not swapped
+	end
+	letters
+	
+end
+
+# p assign_index("z")
+
+a = ["a","z","e","g","j"]
+p alphabetize(a)

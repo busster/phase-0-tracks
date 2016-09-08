@@ -11,5 +11,20 @@ describe Hangman do
     expect(game.guess_letter("b")).to eq ["b"]
   end
 
+  it "ends game when the guessed word == the secret word" do
+    test = ["t","e","s"]
+    test.each do |letter|
+      game.guess_letter(letter)
+    end
+    expect(game.stop_game).to eq true
+  end
+
+  it "ends game when the guess count gets too high" do
+    test = ["t","e","b","j","k","p"]
+    test.each do |letter|
+      game.guess_letter(letter)
+    end
+    expect(game.stop_game).to eq true
+  end
 
 end

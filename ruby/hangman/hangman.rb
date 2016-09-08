@@ -1,7 +1,3 @@
-require 'rubygems'
-require 'password'
-
-
 class Hangman
 	attr_accessor :guess_word, :secret_word, :letter_list, :guess_count, :game_over, :win
 
@@ -83,17 +79,18 @@ puts "---------------------------------------"
 puts "The goal is to guess the secret word.\nYou have the same amount of guesses as the length of the word.\nHowever, duplicate or correct guesses will not count against you."
 puts "---------------------------------------"
 puts "Enter a word to be guessed:"
-secret_word = gets.chomp
+secret_word = gets.chomp.downcase
 secret_word = secret_word.split('')
 game = Hangman.new(secret_word)
 while !game.game_over
 	puts "Letters you've guessed so far: "+ game.letter_list.join(',')
 	puts game.guess_word.join(' ')
 	puts "Guesses remaining: " + (game.guess_word.length - game.guess_count).to_s
-	print "Enter a letter to guess:"
-	input = gets.chomp
+	print "Enter a letter to guess: "
+	input = gets.chomp.downcase
 	game.guess_letter(input)
 	game.stop_game
+	print "\n"
 end
 if game.win == true
 	puts "Congratulations! You guessed the word \"#{game.secret_word.join}\"!"

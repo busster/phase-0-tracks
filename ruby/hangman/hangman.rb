@@ -1,5 +1,5 @@
 class Hangman
-	attr_accessor :guess_word, :guessed_letters
+	attr_accessor :guess_word, :letter_list, :guess_count, :game_over
 
 	def initialize(secret_word)
 		@secret_word = secret_word
@@ -8,31 +8,35 @@ class Hangman
 			@guess_word << '_'
 		end
 		@guess_count = 0
-		@guessed_letters = []
+		@letter_list = []
 		@game_over = false
 	end
 
 
 	def guess_letter(letter)
 		@guess_count += 1
-		
+		@letter_list << letter
 		if @secret_word.include?(letter)
-			index = @secret_word.index(letter)
-			@guess_word[index] = @secret_word[index]
+			index = @secret_word.each_index.select{|i| @secret_word[i] == letter}
+			index.each do |index|
+				@guess_word[index] = @secret_word[index]
+			end
 			return @guess_word
 		end
-		@guessed_letters << letter
+		return @letter_list
 
 	end
 
-	def check_word(guess_word, secret_word)
+
+	def stop_game
 		if @guess_word == @secret_word
+			@game_over = true
+		elsif @guess_count == @secret_word.length
 			@game_over = true
 		else
 			false
 		end
 	end
-
 
 end
 
@@ -40,14 +44,27 @@ end
 
 
 
-test = "test".split('')
+word = "test".split('')
 
-game = Hangman.new(test)
 
-game.guess_letter("t")
+game = Hangman.new(word)
 
-p game.guess_word
-p game.guessed_letters
+while !game.game_over
+	
+	input = gets.chomp
+	game.guess_letter(input)
+	
+	p game.guess_count
+	p length
+	p game.guess_word
+	p game.letter_list
+	game.stop_game
+end
+
+# game.guess_letter("t")
+
+# p game.guess_word
+# p game.guessed_letters
 
 
 

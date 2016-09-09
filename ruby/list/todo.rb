@@ -5,7 +5,6 @@ class TodoList
 
 	def get_items(*index)
 		master =  *index
-
 		if !master.any?
 			@list_array
 		else
@@ -13,7 +12,6 @@ class TodoList
 		end
 			# dont need a new method called get_item because this will handle 
 			# an argument if provided or just returnt he full array if not
-
 	end
 
 	def add_item(item)

@@ -1,0 +1,21 @@
+- enter a word
+	- split word into an array 'secret_word'
+		- get length of array 'secret_word'
+- build new array 'guess_word' filled with _'s from length of array
+- guess count can't exceed length
+- iterate through array 'secret_word' |i|
+	- if input == char 
+		- set 'guess_word'[i] = 'secret_word'[i]
+
+
+
+* will have to handle lower vs upper case letters
+
+
+
+get input
+while secret_word.length < guess count || guess_word != secret_word
+	check if letter is in secret_word
+		if it is change the letter in the guess_word
+			add letter to guesses
+		if not add letter to guess

@@ -68,3 +68,5 @@ santas.length.times do |i|
 	santa = santas[i]
 	puts "Santa #{i + 1} is #{santa.age} years old. They are #{santa.gender}, and #{santa.ethnicity}."
 end
+
+

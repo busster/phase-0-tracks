@@ -27,4 +27,9 @@ describe Hangman do
     expect(game.stop_game).to eq true
   end
 
+  it "adds special characters and spaces to the displayed word if there are any" do
+    game = Hangman.new([","," ",".","a"])
+    expect(game.reveal_special_chars).to eq [",", " ", ".", "_"]
+  end
+
 end

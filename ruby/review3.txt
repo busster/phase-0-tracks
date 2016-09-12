@@ -1,0 +1,12 @@
+1. classes are objects, they are initialized and an instance is created. They have an internal state, and the state is local to those objects. The classes have instance methods and instance variables. These are only available to the instances of the class. 
+
+2. classes have attributes that each instance can access. they can be readable or writeable.
+
+3. clock class
+has seconds hours and minutes. it has 3 hands. it can be round. there are a 60 seconds in a minute and 60 minutes in an hour.
+
+4. the initialize method runs whenever an instance of the method is declared. it can be used to declare any attributes right away.
+
+5. modules are a way of grouping together methods.
+
+6. they are useful because they provide a namespace for a group of methods. they can also be mixed in

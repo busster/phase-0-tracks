@@ -14,8 +14,8 @@ function longestPhrase(phrases) {
 		if (phraseLength < length) {
 			var longestPhraseIndex = i
 			phraseLength = length
-	}
 		}
+	}
 	return phrases[longestPhraseIndex]
 }
 

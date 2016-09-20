@@ -1,0 +1,83 @@
+sqlite> SELECT * FROM medium;
+1|Mosaic
+2|Stencil
+3|Sculpture
+4|Mural
+
+sqlite> UPDATE street_artists SET medium_id=3 WHERE name="Slinkachu";
+
+sqlite> SELECT * FROM street_artists;
+1|Space Invader|false|1
+2|Boxi|true|2
+3|Evol|true|2
+4|Banksy|false|2
+5|Slinkachu|false|3
+6|Os Gemeos|true|4
+8|JR|true|4
+9|Blu|true|4
+
+sqlite> SELECT * FROM street_artists, medium WHERE street_artists.medium_id = medium.id;
+1|Space Invader|false|1|1|Mosaic
+2|Boxi|true|2|2|Stencil
+3|Evol|true|2|2|Stencil
+4|Banksy|false|2|2|Stencil
+5|Slinkachu|false|3|3|Sculpture
+6|Os Gemeos|true|4|4|Mural
+8|JR|true|4|4|Mural
+9|Blu|true|4|4|Mural
+
+sqlite> SELECT street_artists.name, medium.style FROM street_artists JOIN medium ON street_artists.medium_id = medium.id;
+Space Invader|Mosaic
+Boxi|Stencil
+Evol|Stencil
+Banksy|Stencil
+Slinkachu|Sculpture
+Os Gemeos|Mural
+JR|Mural
+Blu|Mural
+
+sqlite> DELETE FROM street_artists WHERE identity_known="false";
+
+sqlite> SELECT * FROM street_artists;
+2|Boxi|true|2
+3|Evol|true|2
+6|Os Gemeos|true|4
+8|JR|true|4
+9|Blu|true|4
+
+
+
+sqlite> SELECT street_artists.name, street_artists.identity_known, medium.style FROM street_artists INNER JOIN medium ON street_artists.medium_id=medium.id;
+Boxi|true|Stencil
+Evol|true|Stencil
+Os Gemeos|true|Mural
+JR|true|Mural
+Blu|true|Mural
+
+sqlite> SELECT name, identity_known, medium.style FROM street_artists LEFT JOIN medium ON street_artists.medium_id=medium.id;
+Boxi|true|Stencil
+Evol|true|Stencil
+Os Gemeos|true|Mural
+JR|true|Mural
+Blu|true|Mural
+
+* There are different ways to join the data. Left Join, returns all rows from the "left" table with the match from the "right", null if there is no match. Inner Join, returns all rows from the "left" and "right" table only if there is a match. So if there was no match you wouldn't see an entry from either table.
+* in my example the distinction on joins is not important because each artist has a link to a style.
+
+
+*** Left Join with an entry that doesn's have a corresponding style
+sqlite> SELECT name, identity_known, medium.style FROM street_artists LEFT JOIN medium ON street_artists.medium_id=medium.id;
+Boxi|true|Stencil
+Evol|true|Stencil
+Os Gemeos|true|Mural
+JR|true|Mural
+Blu|true|Mural
+Gaia|false|
+
+*** Inner Join showing that the entry "Gaia" is not displayed because there was no match.
+sqlite> SELECT street_artists.name, street_artists.identity_known, medium.style FROM street_artists INNER JOIN medium ON street_artists.medium_id=medium.id;
+Boxi|true|Stencil
+Evol|true|Stencil
+Os Gemeos|true|Mural
+JR|true|Mural
+Blu|true|Mural

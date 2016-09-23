@@ -1,0 +1,26 @@
+8.4 Paired with Jason Buss
+
+2.
+Query:
+SELECT * FROM reviews, businesses, users WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id;
+
+Output:
+1|3|This place smelled funny, but had great drinks.|3|1|3|The Beagle Nightclub|1|Bradford|Pitt
+2|5|Great reliable towing service!!!|2|3|2|Amir's Towing|3|Angela|Jolie
+3|2|This place is closed!|1|1|1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt
+
+3.
+Query:
+SELECT users.firstname, users.lastname, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN businesses, users ON reviews.business_id = businesses.id AND reviews.user_id = users.id;
+
+Output:
+Bradford|Pitt|The Beagle Nightclub|3|This place smelled funny, but had great drinks.
+Angela|Jolie|Amir's Towing|5|Great reliable towing service!!!
+Bradford|Pitt|Grundy Hollow Wedding Chapel|2|This place is closed!
+
+4.
+Query:
+SELECT businesses.name, reviews.stars, reviews.comment, users.firstname, users.lastname FROM reviews JOIN businesses, users ON reviews.user_id = users.id AND reviews.business_id = businesses.id WHERE businesses.id = 1;
+
+Output:
+Grundy Hollow Wedding Chapel|2|This place is closed!|Bradford|Pitt

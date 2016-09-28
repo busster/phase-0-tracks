@@ -1,0 +1,4 @@
+- First I'm going to check out W3 to see what sort of JQuery methods are available to me and what they look like.
+- Next I'll test out some of those methods.
+- Then I will look up some real world examples of JQuery in use.
+- Then I will try to figure out how those were made and try to recreate some of them.
